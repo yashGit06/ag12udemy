@@ -5,4 +5,14 @@ import { Component } from "@angular/core";
     templateUrl:'./server.component.html'
 })
 
-export class ServerComponent{}
+export class ServerComponent{
+    randomeValue = Math.random()
+    serverStatus : string;
+    constructor(){
+        this.serverStatus=this.randomeValue>0.5?"online":"offline";
+    }
+
+    onColorChange(){
+        return this.serverStatus==='online'?"green":"red";
+    }
+}

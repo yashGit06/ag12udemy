@@ -1,8 +1,12 @@
 <p>Servers works!</p>
 <app-server> </app-server>
+<app-server> </app-server>
 <label>Two-way binding</label>fsfds
 <input type="text" class="form-control" [(ngModel)]="serverName">
-<!-- used ngIf directive --><p *ngIf="!(serverName==='')"><label>String Interpolation</label> example for Two-way binding-> {{serverName}}</p>
+<!-- used ngIf directive --><p *ngIf="!(serverName===''); else elseMarker"><label>String Interpolation</label> example for Two-way binding-> {{serverName}}</p>
+<ng-template #elseMarker>
+    <p>Nothing to see here just a <label>*ngIf's else block</label></p>
+</ng-template>
 <hr>
 <label>Event binding</label>
 <input type="text" class="form-control" (input)="onCreateText($event)">
