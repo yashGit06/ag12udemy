@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
+  serverName="";
+  evtBind="";
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  onCreateText(event:Event){
+    this.evtBind=(<HTMLInputElement>event.target).value;
   }
 
 }

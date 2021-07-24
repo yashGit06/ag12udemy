@@ -1,3 +1,9 @@
-<p>servers works!</p>
+<p>Servers works!</p>
 <app-server> </app-server>
-<app-server></app-server>
+<label>Two-way binding</label>fsfds
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<!-- used ngIf directive --><p *ngIf="!(serverName==='')"><label>String Interpolation</label> example for Two-way binding-> {{serverName}}</p>
+<hr>
+<label>Event binding</label>
+<input type="text" class="form-control" (input)="onCreateText($event)">
+<p [hidden]="evtBind ===''"><label>String Interpolation</label> for Event binding example -> {{evtBind}}</p>
