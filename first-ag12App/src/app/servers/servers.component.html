@@ -1,6 +1,6 @@
-<p>Servers works!</p>
-<app-server> </app-server>
-<app-server> </app-server>
+<a>Servers works!</a>
+<button type="button" class="btn btn-info" (click)="onCreateServers()">Add Server</button>
+<app-server *ngFor="let server of myServers"> </app-server>
 <label>Two-way binding</label>fsfds
 <input type="text" class="form-control" [(ngModel)]="serverName">
 <!-- used ngIf directive --><p *ngIf="!(serverName===''); else elseMarker"><label>String Interpolation</label> example for Two-way binding-> {{serverName}}</p>

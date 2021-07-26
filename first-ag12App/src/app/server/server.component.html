@@ -1,1 +1,4 @@
-<p [ngStyle]="{backgroundColor:onColorChange()}">This server component is {{serverStatus}}</p>
+<div class="container">
+    <a class="text-center" style="border-radius: 50px; padding: 1%;" [ngStyle]="{backgroundColor:onColorChange()}" [ngClass]="{online:serverStatus==='online',offline:serverStatus==='offline'}">This server component is {{serverStatus}}</a>
+    <button type="button" style="margin-bottom: 1%;" class="btn btn-primary" (click)="onRefresh()">Refresh Server</button>
+</div>
